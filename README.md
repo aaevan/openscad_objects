@@ -6,5 +6,5 @@
 
 All objects are designed to be printable without support structures.
 
-Also included is a script (**generate_previews.sh**) to generate a .png for every openscad file in the directory.
-Needs a valid **previews** directory to work.
+Also included are scripts (**generate_previews.sh** and **generate_stls.sh**) to generate a .png and an .stl for each file.
+Each script requires a valid **previews** and **stls** directories to work.
