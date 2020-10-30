@@ -1,6 +1,8 @@
 // used to push the top edge of a roll-down curtain against a windowframe
 // with a 16.3mm/.65in diameter dowel
 
+//at lines 81-86 and lines 97-102 note the option of toggling between a long version and short version
+
 $fn = 50;
 diameter = 17;
 buck_height = 40;
@@ -76,9 +78,13 @@ difference(){
         minkowski(){
             union(){
                 //vertical block
+                // short version
                 translate([0, -20.5, 11]) cube([24, 4, 20], center=true);
-                //horizontal block
                 translate([0, -15, 3]) rotate([90, 0, 0]) cube([24, 4, 10], center=true);
+                // long version
+                //translate([0, -25.5, 11]) cube([24, 4, 20], center=true);
+                //translate([0, -20, 3]) rotate([90, 0, 0]) cube([24, 4, 14], center=true);
+                //horizontal block
             }
             union(){
                 cylinder(r1=1, r2=0, h=1);
@@ -88,6 +94,10 @@ difference(){
     }
     translate([-7, -15, 15]) rotate([90, 0, 0]) cylinder(r1=2, r2=2, h=30, center=true);
     translate([7, -15, 15]) rotate([90, 0, 0]) cylinder(r1=2, r2=2, h=30, center=true);
+    // short version hole chamfers
     translate([-7, -18.5, 15]) rotate([90, 0, 0]) cylinder(r1=4, r2=0, h=4, center=true);
     translate([7, -18.5, 15]) rotate([90, 0, 0]) cylinder(r1=4, r2=0, h=4, center=true);
+    // long version hole chamfers
+    //translate([-7, -23.5, 15]) rotate([90, 0, 0]) cylinder(r1=4, r2=0, h=4, center=true);
+    //translate([7, -23.5, 15]) rotate([90, 0, 0]) cylinder(r1=4, r2=0, h=4, center=true);
 }
