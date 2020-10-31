@@ -1,3 +1,4 @@
+// designed to hold a large plastic measuring vessel upside down against a wall
 difference(){
     minkowski(){
         difference(){

@@ -1,3 +1,5 @@
+// designed (but not tested?) to work with 20x20 extrusion.
+
 $fn = 50;
 union() {
     difference() {

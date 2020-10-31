@@ -1,4 +1,4 @@
-// made so eggs don't roll off of my kitchen counter
+// a small object I made so eggs don't roll off of my kitchen counter
 
 // squish along y axis
 scale([.7, .5, .7]){

@@ -1,7 +1,10 @@
 // used to push the top edge of a roll-down curtain against a windowframe
 // with a 16.3mm/.65in diameter dowel
 
-//at lines 81-86 and lines 97-102 note the option of toggling between a long version and short version
+// at lines 81-86 and lines 97-102 note the option of toggling between a 
+// long version and short version
+
+// my windowsills are slightly proud of the surrounding drywall so YMMV
 
 $fn = 50;
 diameter = 17;
@@ -92,7 +95,9 @@ difference(){
             }
         }
     }
+    // screw hole (-X)
     translate([-7, -15, 15]) rotate([90, 0, 0]) cylinder(r1=2, r2=2, h=30, center=true);
+    // screw hole (+X)
     translate([7, -15, 15]) rotate([90, 0, 0]) cylinder(r1=2, r2=2, h=30, center=true);
     // short version hole chamfers
     translate([-7, -18.5, 15]) rotate([90, 0, 0]) cylinder(r1=4, r2=0, h=4, center=true);

@@ -1,3 +1,5 @@
+// made to hold a tablet against a wall
+
 difference(){
     minkowski(){
         intersection(){
@@ -22,17 +24,22 @@ difference(){
                 cylinder(r1=1, r2=0, h=1, $fn=50);
                 translate([0, 0, -1]) cylinder(r2=1, r1=0, h=1, $fn=50);
             }
+            // nicked off horizontal edges to save an extra step later
             cylinder(r1=.6, r2=.6, h=3, center=true, $fn=50);
         }
-    }
+    }   
+    // -Y screw hole and screw head clearance
     translate([0, -7.5, 8]) rotate([0, 90, 0]) union(){
         cylinder(r1=2, r2=2, h=40, $fn=50, center=true);
         translate([0, 0, 10.5]) cylinder(r1=4.25, r2=4.25, h=21, $fn=50, center=true);
+        // screw hole chamfer
         translate([0, 0, -7]) cylinder(r1=0, r2=4, h=4, $fn=50, center=true);
     }
+    // Y screw hole and screw head clearance
     translate([0, 7.5, 8]) rotate([0, 90, 0]) union(){
         cylinder(r1=2, r2=2, h=40, $fn=50, center=true);
         translate([0, 0, 10.5]) cylinder(r1=4.25, r2=4.25, h=21, $fn=50, center=true);
+        // screw hole chamfer
         translate([0, 0, -7]) cylinder(r1=0, r2=4, h=4, $fn=50, center=true);
     }
 }
