@@ -24,8 +24,8 @@ difference() {
     for (i = [[-4, 0, 7], [6, 0, -4]]) {
         translate(i) {
             rotate([90, 0, 0]) union() {
-                cylinder(r1=2, r2=2, h=40, center=true);
-                translate([0, 0, 20]) cylinder(r1=4, r2=4, h=40, center=true);
+                cylinder(r1=2.5, r2=2.5, h=40, center=true);
+                translate([0, 0, 20]) cylinder(r1=4.5, r2=4.5, h=40, center=true);
                 translate([0, 0, -13]) cylinder(r1=0, r2=5, h=5);
             }
         }
